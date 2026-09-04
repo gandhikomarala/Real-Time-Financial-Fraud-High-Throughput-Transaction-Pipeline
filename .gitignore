@@ -1,0 +1,15 @@
+.venv/
+node_modules/
+target/
+dist/
+build/
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.tmp
+.env
+.idea/
+.vscode/
