@@ -1,0 +1,26 @@
+name: Real-Time-Financial-Fraud-High-Throughput-Transaction-Pipeline CI Pipeline
+
+on:
+  push:
+    branches: [ main, master, main, development ]
+  pull_request:
+    branches: [ main, master, main ]
+
+jobs:
+  test-and-verify:
+    name: Build, Lint & Automated Verification
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Codebase
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Run Domain & Quality Tests
+      run: |
+        if [ -f "package.json" ]; then npm test --if-present; fi
+        if [ -f "tests/test_domain_suite.py" ]; then python -m unittest discover -s tests; fi
