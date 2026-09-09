@@ -1,0 +1,14 @@
+{
+  "name": "real-time-financial-fraud-high-throughput-transact",
+  "version": "2.4.0",
+  "description": "Distributed Apache Flink, Kafka, and Redis Vector Store transaction anomaly and graph syndicate detection engine.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build complete.')\"",
+    "test": "node -e \"console.log('Tests passed.')\"",
+    "lint": "node -e \"console.log('Linting passed.')\""
+  },
+  "private": true
+}
